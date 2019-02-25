@@ -1,0 +1,314 @@
+buildscript {
+    dependencies {
+        classpath files('libs/mucommander-gradle-macappbundle-2.1.6.jar', 'libs/proguard-6.0.3.jar')
+    }
+}
+
+plugins {
+    id 'application'
+    id 'org.ajoberstar.grgit' version '1.3.2'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+    id 'edu.sc.seis.macAppBundle' version '2.3.0'
+    id 'edu.sc.seis.launch4j' version '2.4.4'
+    id 'nebula.ospackage' version '5.1.0'
+}
+
+mainClassName = 'com.mucommander.muCommander'
+
+allprojects {
+    group = 'org.mucommander'
+    version = '0.9.4'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+ext {
+    // Open the Git repository in the current directory.
+    git = org.ajoberstar.grgit.Grgit.open(file('.'))
+
+    // Get commit id of HEAD.
+    revision = git.head().id
+}
+
+test {
+    useTestNG()
+}
+
+repositories.jcenter()
+
+dependencies {
+    compile project('mucommander-commons-file')
+    compile project('mucommander-commons-conf')
+    compile project('mucommander-commons-collections')
+
+    compile 'org.jmdns:jmdns:3.5.1'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'ch.qos.logback:logback-core:1.2.3'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    compile 'com.beust:jcommander:1.66'
+    compileOnly files('libs/java-extension.jar')
+
+    testCompile 'org.testng:testng:6.11'
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes("Main-Class": mainClassName,
+                   "Specification-Title": "muCommander",
+                   "Specification-Vendor": "Arik Hadas",
+                   "Specification-Version": version,
+                   "Implementation-Title": "muCommander",
+                   "Implementation-Vendor": "Arik Hadas",
+                   "Implementation-Version": revision.substring(0, 7),
+                   "Build-Date": new Date().format('yyyyMMdd'),
+                   "Build-URL": "http://www.mucommander.com/version/nightly.xml")
+    }
+}
+
+shadowJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    exclude 'com/ibm/icu/impl/**'
+    exclude 'com/ibm/icu/lang/**'
+    exclude 'com/ibm/icu/math/**'
+    exclude 'com/ibm/icu/util/**'
+    exclude 'javax/el/**'
+    exclude 'javax/servlet/**'
+    exclude 'com/sun/jna/darwin/**'
+    exclude 'com/sun/jna/freebsd-x86/**'
+    exclude 'com/sun/jna/freebsd-x86-64/**'
+    exclude 'com/sun/jna/linux-arm/**'
+    exclude 'com/sun/jna/linux-x86/**'
+    exclude 'com/sun/jna/linux-x86-64/**'
+    exclude 'com/sun/jna/openbsd-x86/**'
+    exclude 'com/sun/jna/openbsd-x86-64/**'
+    exclude 'com/sun/jna/sunos-sparc/**'
+    exclude 'com/sun/jna/sunos-sparcv9/**'
+    exclude 'com/sun/jna/sunos-x86/**'
+    exclude 'com/sun/jna/sunos-x86-64/**'
+    exclude 'com/sun/jna/w32ce-arm/**'
+    exclude 'org/eclipse/**'
+    exclude 'jdtCompilerAdapter.jar'
+    exclude 'LICENSE*'
+}
+
+task proguard(type: proguard.gradle.ProGuardTask) {
+    configuration 'package/proguard.txt'
+
+    injars file('tmp.jar')
+    outjars shadowJar.archivePath
+}
+proguard.enabled = !JavaVersion.current().isJava9Compatible()
+
+shadowJar.doLast {
+    file(shadowJar.archivePath).renameTo('tmp.jar')
+    proguard.execute()
+    file('tmp.jar').delete()
+}
+
+macAppBundle {
+    appName = "muCommander"
+    mainClassName = "com.mucommander.muCommander"
+    appStyle = "Oracle"
+    bundleJRE = true
+    jreHome = "jre/Contents/Home"
+    bundleIdentifier = "com.mucommander.muCommander"
+    jvmVersion = "1.6+"
+    icon = "package/osx/icon.icns"
+    bundleAllowMixedLocalizations = "true"
+    bundleExtras.put("NSHighResolutionCapable", "true")
+    bundleExtras.put("NSSupportsAutomaticGraphicsSwitching", "true")
+    backgroundImage = "package/osx/bg.gif"
+    backgroundImageWidth = 450
+    backgroundImageHeight = 475
+    appIconX = 225
+    appIconY = 75
+    appFolderX = 225
+    appFolderY = 350
+
+    javaProperties.put("java.system.class.loader", "com.mucommander.commons.file.AbstractFileClassLoader")
+    javaProperties.put("com.apple.smallTabs", "true")
+    javaProperties.put("com.apple.hwaccel", "true")
+    javaProperties.put("apple.laf.useScreenMenuBar", "true")
+    javaProperties.put("file.encoding", "UTF-8")
+}
+
+launch4j {
+    icon = "$projectDir/package/windows/mucommander.ico"
+    copyConfigurable = project.tasks.shadowJar.outputs.files
+    if (project.hasProperty('dontWrapJar')) {
+        dontWrapJar = true
+        jar = 'mucommander.jar'
+    }
+    else {
+        jar = shadowJar.archivePath
+    }
+    outfile = project.tasks.jar.archiveName.replace('jar', 'exe')
+    cmdLine = '-p %HOMEPATH%/.mucommander'
+    opt = '-Djava.system.class.loader=com.mucommander.commons.file.AbstractFileClassLoader'
+}
+
+import org.apache.tools.ant.filters.ReplaceTokens
+
+// Windows installer
+task nsis(dependsOn: createExe) {
+    copy {
+        from("$buildDir/launch4j/" + launch4j.outfile)
+        from('package/windows') {
+            include 'mucommander.ico'
+        }
+        from('package/windows') {
+            include 'mucommander.nsi'
+            filter(ReplaceTokens, tokens: [MU_VERSION: project.version,
+                                           MU_ICON: 'mucommander.ico',
+                                           MU_LICENSE: 'license.txt',
+                                           MU_README: 'readme.txt',
+                                           MU_OUT: 'mucommander-setup.exe',
+                                           MU_EXE: launch4j.outfile])
+        }
+        from ('package') {
+	    include 'license.txt',
+	    'readme.txt'
+	}
+        into "$buildDir/tmp/nsis"
+    }
+}
+
+// Unix packaging
+task tgz(dependsOn: shadowJar, type: Tar) {
+    from ("$buildDir/libs") {
+        include '*.jar'
+        rename '(.*?)-.*.jar','$1.jar'
+    }
+    from ('package') { include 'license.txt', 'readme.txt' }
+    from ('package/unix/mucommander.sh') {
+        filter(ReplaceTokens, tokens: [JAVA_ARGS: '-Djava.system.class.loader=com.mucommander.commons.file.AbstractFileClassLoader',
+                                       ARGS: ''])
+    }
+    into "muCommander-$version"
+    extension = 'tar.gz'
+    compression = Compression.GZIP
+}
+
+// Portable packaging
+task portable(type: Tar) {
+    from ("$buildDir/libs") {
+        include '*.jar'
+        rename '(.*?)-.*.jar','$1.jar'
+    }
+    from ("$buildDir/launch4j") {
+        include '*.exe'
+        rename '(.*?)-.*.exe','$1.exe'
+    }
+    from ('package') { include 'license.txt', 'readme.txt' }
+    from ('package/unix/mucommander.sh') {
+        filter(ReplaceTokens, tokens: [JAVA_ARGS: '-Djava.system.class.loader=com.mucommander.commons.file.AbstractFileClassLoader',
+                                       ARGS: ''])
+    }
+    into "muCommander-$version"
+    classifier = 'portable'
+    extension = 'tar.gz'
+    compression = Compression.GZIP
+}
+
+// Debian packaging
+buildDeb {
+    postInstall file('package/unix/postinst')
+    postUninstall file('package/unix/postrm')
+
+    maintainer = 'Arik Hadas <arik.hadas1@gmail.com>'
+    summary = 'a lightweight, cross-platform file manager'
+    suggests('sun-java6-jre')
+    recommends('java-virtual-machine')
+    recommends('java2-runtime')
+
+    from ("$buildDir/libs") {
+        include '*.jar'
+        rename '(.*?)-.*.jar','$1.jar'
+    }
+    from ('package') { include 'license.txt', 'readme.txt' }
+    from ('package/unix/mucommander.sh') {
+        filter(ReplaceTokens, tokens: [JAVA_ARGS: '-Djava.system.class.loader=com.mucommander.commons.file.AbstractFileClassLoader',
+                                       ARGS: ''])
+    }
+    into '/usr/share/mucommander'
+
+    from ('src/main/resources/images/mucommander') {
+        include 'icon128_24.png'
+        into '/usr/share/pixmaps/'
+        rename '.*', 'mucommander.png'
+    }
+    from ('package/unix') {
+        include 'mucommander.desktop'
+        into '/usr/share/applications'
+    }
+}
+
+buildRpm {
+    postInstall file('package/unix/postinst')
+    postUninstall file('package/unix/postrm')
+
+    maintainer = 'Arik Hadas <arik.hadas1@gmail.com>'
+    summary = 'a lightweight, cross-platform file manager'
+    suggests('sun-java6-jre')
+    recommends('java-virtual-machine')
+    recommends('java2-runtime')
+    os = LINUX
+
+    from ("$buildDir/libs") {
+        include '*.jar'
+        rename '(.*?)-.*.jar','$1.jar'
+    }
+    from ('package') { include 'license.txt', 'readme.txt' }
+    from ('package/unix/mucommander.sh') {
+        filter(ReplaceTokens, tokens: [JAVA_ARGS: '-Djava.system.class.loader=com.mucommander.commons.file.AbstractFileClassLoader',
+                                       ARGS: ''])
+    }
+    into '/usr/share/mucommander'
+
+    from ('src/main/resources/images/mucommander/icon128_24.png') {
+        rename '.*', 'mucommander.png'
+        addParentDirs = false
+        into '/usr/share/pixmaps'
+    }
+    from ('package/unix') {
+        include 'mucommander.desktop'
+        addParentDirs = false
+        into '/usr/share/applications'
+    }
+}
+
+task(afterEclipseImport).doLast {
+    File f = file('.settings/org.eclipse.core.resources.prefs')
+    f.write('eclipse.preferences.version=1\n')
+    f.append('encoding//src/main/resources/languages.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ar.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_be.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ca.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_cs.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_da.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_de.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_en.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_en_GB.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_es.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_fr.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_hu.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_it.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ja.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ko.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_nb.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_nl.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_pl.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_pt_BR.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ro.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ru.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_sk.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_sl.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_sv.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_tr.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_ua.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_zh_CN.properties=UTF-8\n')
+    f.append('encoding//src/main/resources/dictionary_zh_TW.properties=UTF-8\n')
+}
+
