@@ -42,7 +42,7 @@ public class WinNtDesktopAdapter extends WindowsDesktopAdapter {
     @Override
     public void init(boolean install) throws DesktopInitialisationException {
         super.init(install);
-@BUG LowPriority - wisb (1 of 1) ->|        try {
+        try {
             CommandManager.registerDefaultCommand(new Command(CommandManager.FILE_OPENER_ALIAS,  FILE_OPENER_COMMAND, CommandType.SYSTEM_COMMAND, null));
             CommandManager.registerDefaultCommand(new Command(CommandManager.URL_OPENER_ALIAS,   FILE_OPENER_COMMAND, CommandType.SYSTEM_COMMAND, null));
             CommandManager.registerDefaultCommand(new Command(CommandManager.FILE_MANAGER_ALIAS, FILE_OPENER_COMMAND, CommandType.SYSTEM_COMMAND, EXPLORER_NAME));
