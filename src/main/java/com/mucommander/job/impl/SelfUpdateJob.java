@@ -82,9 +82,9 @@ import com.mucommander.ui.main.WindowManager;
     private SelfUpdateJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, AbstractFile destJar) {
         this(progressDialog, mainFrame, files, destJar, getTempDestJar(destJar));
     }
-@BUG HighPriority - tmju (1 of 3) ->|
-@BUG HighPriority - tmju (1 of 3) ->|    private SelfUpdateJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, AbstractFile destJar, AbstractFile tempDestJar) {
-@BUG HighPriority - tmju (1 of 3) ->|        super(progressDialog, mainFrame, files, tempDestJar.getParent(), tempDestJar.getName(), TransferMode.DOWNLOAD, FileCollisionDialog.OVERWRITE_ACTION);
+
+private SelfUpdateJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, AbstractFile destJar, AbstractFile tempDestJar) {
+        super(progressDialog, mainFrame, files, tempDestJar.getParent(), tempDestJar.getName(), TransferMode.DOWNLOAD, FileCollisionDialog.OVERWRITE_ACTION);
 
         this.destJar = destJar;
         this.tempDestJar = tempDestJar;
