@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - klfj (1 of 3) ->|
-@BUG HighPriority - klfj (1 of 3) ->|
-@BUG HighPriority - klfj (1 of 3) ->|package com.mucommander.cache;
+
+
+package com.mucommander.cache;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
