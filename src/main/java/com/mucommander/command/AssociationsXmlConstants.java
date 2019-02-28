@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - fibe (2 of 2) ->|
-@BUG MediumPriority - fibe (2 of 2) ->|package com.mucommander.command;
+package com.mucommander.command;
 
 /**
  * Defines the structure of a custom associations XML file.
