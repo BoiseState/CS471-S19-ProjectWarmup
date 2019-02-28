@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - upqx (2 of 2) ->|
+
 package com.mucommander.command;
 
 import com.mucommander.commons.file.PermissionType;
