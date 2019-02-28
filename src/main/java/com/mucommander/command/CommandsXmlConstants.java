@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 @BUG HighPriority - aeys (1 of 3) ->|
-@BUG HighPriority - aeys (1 of 3) ->|package com.mucommander.command;
-@BUG HighPriority - aeys (1 of 3) ->|
+package com.mucommander.command;
+
 /**
  * Defines the structure of a custom commands XML file.
  * <p>

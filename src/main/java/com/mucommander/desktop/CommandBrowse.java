@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 @BUG HighPriority - aeys (3 of 3) ->|
-@BUG HighPriority - aeys (3 of 3) ->|package com.mucommander.desktop;
-@BUG HighPriority - aeys (3 of 3) ->|
+package com.mucommander.desktop;
+
 import com.mucommander.command.Command;
 import com.mucommander.command.CommandManager;
 import com.mucommander.commons.file.AbstractFile;

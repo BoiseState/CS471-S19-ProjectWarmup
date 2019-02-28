@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 @BUG MediumPriority - upqx (1 of 2) ->|
-@BUG MediumPriority - upqx (1 of 2) ->|package com.mucommander.command;
+package com.mucommander.command;
 
 
 /**
