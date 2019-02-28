@@ -38,8 +38,7 @@ class CommandOpen extends LocalFileOperation {
 
     // - Initialisation --------------------------------------------------
     // -------------------------------------------------------------------
-@BUG MediumPriority - nyew (1 of 2) ->|    public CommandOpen(boolean allowDefault) {this.allowDefault = allowDefault;}
-@BUG MediumPriority - nyew (1 of 2) ->|
+    public CommandOpen(boolean allowDefault) {this.allowDefault = allowDefault;}
 
 
     // - Desktop operation implementation --------------------------------
