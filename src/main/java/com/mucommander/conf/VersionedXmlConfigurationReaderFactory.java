@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - gomr (2 of 3) ->|
-@BUG HighPriority - gomr (2 of 3) ->|package com.mucommander.conf;
-@BUG HighPriority - gomr (2 of 3) ->|
+
+package com.mucommander.conf;
+
 import com.mucommander.commons.conf.ConfigurationReader;
 import com.mucommander.commons.conf.ConfigurationReaderFactory;
 import com.mucommander.commons.conf.ReaderConfigurationException;
