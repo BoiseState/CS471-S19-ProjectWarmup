@@ -67,9 +67,9 @@ public abstract class AbstractTrash {
      *
      * @return true if the trash was successfully emptied
      */
-@BUG HighPriority - kbnr (1 of 3) ->|    public abstract boolean empty();
-@BUG HighPriority - kbnr (1 of 3) ->|
-@BUG HighPriority - kbnr (1 of 3) ->|    /**
+public abstract boolean empty();
+
+   /**
      * Returns <code>true</code> if the given file is a trash folder, or one of its children.
      * For example, if <code>/home/someuser/.Trash</code> is a trash folder, calling this method with:
      * <ul>
