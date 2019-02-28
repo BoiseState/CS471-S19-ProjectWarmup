@@ -22,7 +22,7 @@ import com.mucommander.commons.io.RandomAccessOutputStream;
  *
  * @author Arik Hadas
  */
-@BUG LowPriority - nhut (1 of 1) ->|class NullableFile extends AbstractFile {
+class NullableFile extends AbstractFile {
 
 	NullableFile(FileURL url) {
 		super(url);
