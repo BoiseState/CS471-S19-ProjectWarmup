@@ -71,7 +71,7 @@ import com.mucommander.commons.file.FileFactory;
  * </p>
  * @author Maxence Bernard, Nicolas Rinaudo
  */
-@BUG LowPriority - oxgg (1 of 1) ->|public class VersionChecker extends DefaultHandler {
+public class VersionChecker extends DefaultHandler {
 	private static final Logger LOGGER = LoggerFactory.getLogger(VersionChecker.class);
 	
     // - XML structure ----------------------------------------------------------
