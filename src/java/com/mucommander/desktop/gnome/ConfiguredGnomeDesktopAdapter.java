@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - ukej (2 of 2) ->|
-@BUG MediumPriority - ukej (2 of 2) ->|package com.mucommander.desktop.gnome;
+package com.mucommander.desktop.gnome;
 
 import com.mucommander.process.ProcessRunner;
 
