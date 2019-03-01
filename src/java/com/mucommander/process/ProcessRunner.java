@@ -68,9 +68,9 @@ import java.util.StringTokenizer;
      * @return                  the generated process.
      * @throws IOException      thrown if any error occurs while creating the process.
      */
-@BUG HighPriority - riyw (1 of 3) ->|    public static AbstractProcess execute(String[] tokens, AbstractFile currentDirectory, ProcessListener listener, String encoding) throws IOException {
-@BUG HighPriority - riyw (1 of 3) ->|        AbstractProcess process;
-@BUG HighPriority - riyw (1 of 3) ->|
+    public static AbstractProcess execute(String[] tokens, AbstractFile currentDirectory, ProcessListener listener, String encoding) throws IOException {
+        AbstractProcess process;
+
         // If currentDirectory is null, use the VM's current directory.
         if(currentDirectory == null) {
             currentDirectory = FileFactory.getFile(System.getProperty("user.dir"), true);
