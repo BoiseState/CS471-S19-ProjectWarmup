@@ -45,7 +45,7 @@ import com.mucommander.commons.file.filter.OrFileFilter;
  * </p>
  * @author Nicolas Rinaudo
  */
-@BUG LowPriority - wmkt (1 of 1) ->|public class ClassFinder {
+public class ClassFinder {
     // - Instance fields -----------------------------------------------------------------
     // -----------------------------------------------------------------------------------
     /** ClassLoader used to load classes from explored files. */
