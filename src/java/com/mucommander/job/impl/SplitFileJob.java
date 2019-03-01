@@ -51,9 +51,9 @@ import com.mucommander.ui.main.MainFrame;
  * This job split the file into parts with given size.
  * @author Mariusz Jakubowski
  */
-@BUG HighPriority - affa (1 of 3) ->|public class SplitFileJob extends AbstractCopyJob {
-@BUG HighPriority - affa (1 of 3) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(SplitFileJob.class);
-@BUG HighPriority - affa (1 of 3) ->|	
+	public class SplitFileJob extends AbstractCopyJob {
+	private static final Logger LOGGER = LoggerFactory.getLogger(SplitFileJob.class);
+
     private long partSize;
 	private AbstractFile sourceFile;
 	private InputStream origFileStream;
