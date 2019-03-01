@@ -42,7 +42,7 @@ class AssociationFactory implements AssociationBuilder {
     public void endAssociation() throws CommandException {
         // Skip empty file filters as they will break the whole
         // association mechanism.
-@BUG LowPriority - sbqk (1 of 1) ->|        if(!filter.isEmpty())
+        if(!filter.isEmpty())
             CommandManager.registerAssociation(command, filter);
     }
 
