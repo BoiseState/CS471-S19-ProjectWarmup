@@ -49,9 +49,9 @@ class NullableFile extends AbstractFile {
 		throw new UnsupportedFileOperationException(FileOperation.CHANGE_PERMISSION);
 	}
 
-@BUG HighPriority - hlhr (1 of 3) ->|	@Override
-@BUG HighPriority - hlhr (1 of 3) ->|	public void copyRemotelyTo(AbstractFile arg0) throws IOException, UnsupportedFileOperationException {
-@BUG HighPriority - hlhr (1 of 3) ->|		throw new UnsupportedFileOperationException(FileOperation.COPY_REMOTELY);
+	@Override
+	public void copyRemotelyTo(AbstractFile arg0) throws IOException, UnsupportedFileOperationException {
+		throw new UnsupportedFileOperationException(FileOperation.COPY_REMOTELY);
 	}
 
 	@Override
