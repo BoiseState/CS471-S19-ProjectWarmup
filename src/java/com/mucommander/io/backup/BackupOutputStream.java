@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - yoqo (1 of 2) ->|
-@BUG MediumPriority - yoqo (1 of 2) ->|package com.mucommander.io.backup;
+
+package com.mucommander.io.backup;
 
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.FileFactory;
