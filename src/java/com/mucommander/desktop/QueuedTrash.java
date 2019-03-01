@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - mcko (2 of 2) ->|
-@BUG MediumPriority - mcko (2 of 2) ->|package com.mucommander.desktop;
+package com.mucommander.desktop;
 
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.text.Translator;

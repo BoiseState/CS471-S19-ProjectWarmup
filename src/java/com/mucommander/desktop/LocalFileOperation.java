@@ -52,8 +52,8 @@ public abstract class LocalFileOperation implements DesktopOperation {
      * @throws IOException                   if an error occurs.
      * @throws UnsupportedOperationException if the operation is not supported.
      */
-@BUG MediumPriority - mcko (1 of 2) ->|    public abstract void execute(AbstractFile file) throws IOException, UnsupportedOperationException;
-@BUG MediumPriority - mcko (1 of 2) ->|
+public abstract void execute(AbstractFile file) throws IOException, UnsupportedOperationException;
+
     /**
      * Checks whether the operation knows how to deal with the specified file.
      * <p>
