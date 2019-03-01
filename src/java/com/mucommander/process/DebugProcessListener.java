@@ -37,8 +37,6 @@ class DebugProcessListener implements ProcessListener {
     /** Command that this listener is monitoring. */
     private String command;
 
-@BUG MediumPriority - fxtf (1 of 2) ->|
-@BUG MediumPriority - fxtf (1 of 2) ->|
     // - Initialisastion -----------------------------------------------------
     // -----------------------------------------------------------------------
     /**
