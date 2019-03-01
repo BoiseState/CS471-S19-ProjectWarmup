@@ -37,7 +37,7 @@ public class PermissionsFileFilter extends AbstractFileFilter {
      * @param permission permission that will be checked against as defined in {@link com.mucommander.commons.file.FilePermissions}.
      * @param filter     whether or not the specified permission flag must be set for a file to be accepted.
      */
-@BUG LowPriority - pesq (1 of 1) ->|    public PermissionsFileFilter(PermissionType permission, boolean filter) {
+public PermissionsFileFilter(PermissionType permission, boolean filter) {
         this.permission = permission;
         this.filter     = filter;
     }
