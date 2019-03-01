@@ -52,8 +52,8 @@ import java.util.List;
  * @see OSXTrashProvider
  * @author Maxence Bernard
  */
-@BUG MediumPriority - dsmx (1 of 2) ->|public class OSXTrash extends QueuedTrash {
-@BUG MediumPriority - dsmx (1 of 2) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(OSXTrash.class);
+public class OSXTrash extends QueuedTrash {
+	private static final Logger LOGGER = LoggerFactory.getLogger(OSXTrash.class);
 	
     /** AppleScript that reveals the trash in Finder */
     private final static String REVEAL_TRASH_APPLESCRIPT =
