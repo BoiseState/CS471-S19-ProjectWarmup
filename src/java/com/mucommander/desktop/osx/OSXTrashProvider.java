@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - dwqo (2 of 3) ->|
-@BUG HighPriority - dwqo (2 of 3) ->|package com.mucommander.desktop.osx;
-@BUG HighPriority - dwqo (2 of 3) ->|
+
+package com.mucommander.desktop.osx;
+
 import com.mucommander.desktop.AbstractTrash;
 import com.mucommander.desktop.TrashProvider;
 
