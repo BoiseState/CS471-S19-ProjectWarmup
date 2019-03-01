@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - luwk (1 of 3) ->|
-@BUG HighPriority - luwk (1 of 3) ->|package com.mucommander.conf;
-@BUG HighPriority - luwk (1 of 3) ->|
+package com.mucommander.conf;
 /**
  * 
  * @author Arik Hadas
