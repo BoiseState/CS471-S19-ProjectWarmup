@@ -65,9 +65,9 @@ public class ProcessListenerList implements ProcessListener {
     /**
      * Propagates the <i>process died</i> event to all registered listeners.
      */
-@BUG HighPriority - bqxd (1 of 3) ->|    public void processDied(int returnValue) {
-@BUG HighPriority - bqxd (1 of 3) ->|        for(ProcessListener listener : listeners)
-@BUG HighPriority - bqxd (1 of 3) ->|            listener.processDied(returnValue);
+public void processDied(int returnValue) {
+       for(ProcessListener listener : listeners)
+           listener.processDied(returnValue);
     }
 
     /**

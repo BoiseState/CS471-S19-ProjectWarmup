@@ -37,7 +37,7 @@ abstract class KdeDesktopAdapter extends DefaultDesktopAdapter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(KdeDesktopAdapter.class);
 	
     /** Multi-click interval, cached to avoid polling the value every time {@link #getMultiClickInterval()} is called */
-@BUG LowPriority - jwrb (1 of 1) ->|    private int multiClickInterval;
+private int multiClickInterval;
 
     /** Key to the double-click interval value in the KDE configuration */
     private String DOUBLE_CLICK_CONFIG_KEY = "DoubleClickInterval";

@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - hlhr (2 of 3) ->|
-@BUG HighPriority - hlhr (2 of 3) ->|package com.mucommander.core;
-@BUG HighPriority - hlhr (2 of 3) ->|
+
+package com.mucommander.core;
+
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.io.IOException;

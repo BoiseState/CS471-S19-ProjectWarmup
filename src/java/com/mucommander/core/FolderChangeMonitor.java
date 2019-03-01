@@ -15,9 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - zdvw (3 of 3) ->|
-@BUG HighPriority - zdvw (3 of 3) ->|package com.mucommander.core;
-@BUG HighPriority - zdvw (3 of 3) ->|
+
+package com.mucommander.core;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.List;

@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - aeys (2 of 3) ->|
-@BUG HighPriority - aeys (2 of 3) ->|package com.mucommander.command;
-@BUG HighPriority - aeys (2 of 3) ->|
+
+package com.mucommander.command;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

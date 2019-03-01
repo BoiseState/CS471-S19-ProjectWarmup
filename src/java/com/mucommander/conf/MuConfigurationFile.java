@@ -66,9 +66,9 @@ abstract class MuConfigurationFile implements ConfigurationSource {
      * @return             the path to the configuration file.
      * @throws IOException if an error occurred while locating the default configuration file.
      */
-@BUG HighPriority - gomr (1 of 3) ->|    private synchronized AbstractFile getConfigurationFile() throws IOException {
-@BUG HighPriority - gomr (1 of 3) ->|        if(configurationFile == null)
-@BUG HighPriority - gomr (1 of 3) ->|            return PlatformManager.getPreferencesFolder().getChild(DEFAULT_CONFIGURATION_FILE_NAME);
+private synchronized AbstractFile getConfigurationFile() throws IOException {
+        if(configurationFile == null)
+            return PlatformManager.getPreferencesFolder().getChild(DEFAULT_CONFIGURATION_FILE_NAME);
         return configurationFile;
     }
 

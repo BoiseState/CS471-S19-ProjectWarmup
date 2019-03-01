@@ -42,8 +42,8 @@ import java.io.InputStream;
  * @see    AssociationWriter
  * @author Nicolas Rinaudo
  */
-@BUG MediumPriority - fibe (1 of 2) ->|public class AssociationReader extends DefaultHandler implements AssociationsXmlConstants {
-@BUG MediumPriority - fibe (1 of 2) ->|    // - Instance variables --------------------------------------------------
+public class AssociationReader extends DefaultHandler implements AssociationsXmlConstants {
+// - Instance variables --------------------------------------------------
     // -----------------------------------------------------------------------
     /** Where to send building messages. */
     private AssociationBuilder builder;

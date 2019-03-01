@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - upqx (2 of 2) ->|
-@BUG MediumPriority - upqx (2 of 2) ->|package com.mucommander.command;
+
+package com.mucommander.command;
 
 import com.mucommander.commons.file.PermissionType;
 import com.mucommander.commons.file.filter.AndFileFilter;
@@ -42,7 +42,7 @@ class AssociationFactory implements AssociationBuilder {
     public void endAssociation() throws CommandException {
         // Skip empty file filters as they will break the whole
         // association mechanism.
-@BUG LowPriority - sbqk (1 of 1) ->|        if(!filter.isEmpty())
+        if(!filter.isEmpty())
             CommandManager.registerAssociation(command, filter);
     }
 

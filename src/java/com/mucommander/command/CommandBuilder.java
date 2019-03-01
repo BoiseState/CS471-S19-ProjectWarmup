@@ -57,8 +57,8 @@
  * @see    CommandReader
  * @see    CommandManager#buildCommands(CommandBuilder)
  */
-@BUG MediumPriority - ynse (1 of 2) ->|public interface CommandBuilder {
-@BUG MediumPriority - ynse (1 of 2) ->|    /**
+public interface CommandBuilder {
+    /**
      * Notifies the builder that command building is about to start.
      * @throws CommandException if an error occurs.
      */

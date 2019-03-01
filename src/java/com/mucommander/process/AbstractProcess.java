@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - bqxd (3 of 3) ->|
-@BUG HighPriority - bqxd (3 of 3) ->|package com.mucommander.process;
-@BUG HighPriority - bqxd (3 of 3) ->|
+
+package com.mucommander.process;
+
 
 import java.io.IOException;
 import java.io.InputStream;
