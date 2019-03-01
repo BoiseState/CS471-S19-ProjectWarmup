@@ -59,9 +59,9 @@ public class MuPreferences implements MuPreferencesAPI {
 	/** Default time format. */
 	public static final String  DEFAULT_TIME_FORMAT               = "hh:mm a";
 	/** Language muCommander should use when looking for text.. */
-@BUG HighPriority - iegp (1 of 3) ->|	public static final String  LANGUAGE                          = "language";
-@BUG HighPriority - iegp (1 of 3) ->|	/** Whether or not to display compact file sizes. */
-@BUG HighPriority - iegp (1 of 3) ->|	public static final String  DISPLAY_COMPACT_FILE_SIZE         = "display_compact_file_size";
+	public static final String  LANGUAGE                          = "language";
+	/** Whether or not to display compact file sizes. */
+	public static final String  DISPLAY_COMPACT_FILE_SIZE         = "display_compact_file_size";
 	/** Default file size display behavior. */
 	public static final boolean DEFAULT_DISPLAY_COMPACT_FILE_SIZE = true;
 	/** Whether or not to ask the user for confirmation before quitting muCommander. */

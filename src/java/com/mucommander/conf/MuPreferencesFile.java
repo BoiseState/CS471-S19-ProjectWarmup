@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - iegp (3 of 3) ->|
-@BUG HighPriority - iegp (3 of 3) ->|package com.mucommander.conf;
-@BUG HighPriority - iegp (3 of 3) ->|
+package com.mucommander.conf;
 import java.io.FileNotFoundException;
 
 /**
