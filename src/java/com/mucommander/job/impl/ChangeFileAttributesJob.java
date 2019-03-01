@@ -38,7 +38,7 @@ import com.mucommander.ui.main.MainFrame;
  */
 public class ChangeFileAttributesJob extends FileJob {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ChangeFileAttributesJob.class);
-@BUG LowPriority - gkge (1 of 1) ->|	
+
     private boolean recurseOnDirectories;
 
     private int permissions = -1;
