@@ -38,7 +38,7 @@ public class SizeFormat {
     public final static int DIGITS_FULL = 4;
 
     /** Bitmask for no unit string */
-@BUG LowPriority - yeas (1 of 1) ->|    public final static int UNIT_NONE = 0;
+    public final static int UNIT_NONE = 0;
     /** Bitmask for short unit string, e.g. "b" */
     public final static int UNIT_SHORT = 8;
     /** Bitmask for short unit string, e.g. "bytes" */
