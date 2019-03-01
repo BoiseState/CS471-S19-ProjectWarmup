@@ -33,9 +33,9 @@ import java.util.List;
 public class BatchRenameJob extends MoveJob {
     private List<String> newNames;
 
-@BUG MediumPriority - bsgl (1 of 2) ->|    public BatchRenameJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, List<String> newNames) {
-@BUG MediumPriority - bsgl (1 of 2) ->|        super(progressDialog, mainFrame, files, files.getBaseFolder(), null, FileCollisionDialog.ASK_ACTION, true);
-        this.newNames = newNames;
+public BatchRenameJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, List<String> newNames) {
+	super(progressDialog, mainFrame, files, files.getBaseFolder(), null, FileCollisionDialog.ASK_ACTION, true);
+		this.newNames = newNames;
     }
 
 
