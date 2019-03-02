@@ -43,7 +43,7 @@ abstract class XfceDesktopAdapter extends DefaultDesktopAdapter {
         try {
         	CommandManager.registerDefaultCommand(new Command(CommandManager.FILE_OPENER_ALIAS,  FILE_OPENER, CommandType.SYSTEM_COMMAND, null));
             CommandManager.registerDefaultCommand(new Command(CommandManager.URL_OPENER_ALIAS,   FILE_OPENER, CommandType.SYSTEM_COMMAND, null));
-@BUG LowPriority - sxgc (1 of 1) ->|            CommandManager.registerDefaultCommand(new Command(CommandManager.EXE_OPENER_ALIAS,   EXE_OPENER,  CommandType.SYSTEM_COMMAND, null));
+            CommandManager.registerDefaultCommand(new Command(CommandManager.EXE_OPENER_ALIAS,   EXE_OPENER,  CommandType.SYSTEM_COMMAND, null));
             CommandManager.registerDefaultCommand(new Command(CommandManager.FILE_MANAGER_ALIAS, FILE_OPENER, CommandType.SYSTEM_COMMAND, FILE_MANAGER_NAME));
         }
         catch(CommandException e) {throw new DesktopInitialisationException(e);}
