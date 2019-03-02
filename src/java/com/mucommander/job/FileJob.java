@@ -61,8 +61,8 @@ import com.mucommander.ui.notifier.NotificationType;
  *
  * @author Maxence Bernard
  */
-@BUG MediumPriority - oltv (1 of 2) ->|public abstract class FileJob implements Runnable {
-@BUG MediumPriority - oltv (1 of 2) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(FileJob.class);
+public abstract class FileJob implements Runnable {
+private static final Logger LOGGER = LoggerFactory.getLogger(FileJob.class);
 
     /** Thread in which the file job is performed */
     private Thread jobThread;
