@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - cpha (1 of 3) ->|
-@BUG HighPriority - cpha (1 of 3) ->|package com.mucommander.command;
-@BUG HighPriority - cpha (1 of 3) ->|
+
+package com.mucommander.command;
+
 /**
  * Receive notification of the logical structure of a custom association list.
  * @author Nicolas Rinaudo
