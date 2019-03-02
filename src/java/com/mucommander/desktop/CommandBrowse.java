@@ -38,8 +38,8 @@ class CommandBrowse extends UrlOperation {
 
     @Override
     public void execute(URL url) throws IOException {
-@BUG MediumPriority - giya (1 of 2) ->|        Command      command;
-@BUG MediumPriority - giya (1 of 2) ->|        AbstractFile target;
+        Command      command;
+        AbstractFile target;
 
         if((command = CommandManager.getCommandForAlias(CommandManager.URL_OPENER_ALIAS)) == null)
             throw new UnsupportedOperationException();
