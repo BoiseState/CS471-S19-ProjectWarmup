@@ -52,8 +52,8 @@ import com.mucommander.ui.main.FolderPanel;
  * @author Maxence Bernard
  * @see <a href="http://trac.mucommander.com/wiki/FolderAutoRefresh">FolderAutoRefresh wiki entry</a>
  */
-@BUG MediumPriority - tubo (1 of 2) ->|public class FolderChangeMonitor implements Runnable, WindowListener, LocationListener {
-@BUG MediumPriority - tubo (1 of 2) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(FolderChangeMonitor.class);
+public class FolderChangeMonitor implements Runnable, WindowListener, LocationListener {
+ private static final Logger LOGGER = LoggerFactory.getLogger(FolderChangeMonitor.class);
 	
     /** Folder panel we are monitoring */
     private FolderPanel folderPanel;

@@ -1,5 +1,5 @@
-@BUG MediumPriority - tubo (2 of 2) ->|package com.mucommander.core;
-@BUG MediumPriority - tubo (2 of 2) ->|
+package com.mucommander.core;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
