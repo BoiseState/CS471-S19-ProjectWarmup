@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - gsmg (2 of 3) ->|
-@BUG HighPriority - gsmg (2 of 3) ->|package com.mucommander.desktop.windows;
-@BUG HighPriority - gsmg (2 of 3) ->|
+
+package com.mucommander.desktop.windows;
+
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.runtime.OsFamily;
 import com.mucommander.desktop.DefaultDesktopAdapter;
