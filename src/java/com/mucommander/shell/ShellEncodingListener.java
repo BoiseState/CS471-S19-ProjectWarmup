@@ -38,8 +38,8 @@ class ShellEncodingListener implements ProcessListener {
         String oldEncoding;
 
         // Abort if there is no need to identify the encoding anymore.
-@BUG MediumPriority - odwj (1 of 2) ->|        if(out == null)
-@BUG MediumPriority - odwj (1 of 2) ->|            return;
+if(out == null)
+return;
 
         // Attempts to guess at the encoding. If no guess can be made, ignore.
         if((encoding = EncodingDetector.detectEncoding(out.toByteArray())) == null)
