@@ -40,8 +40,8 @@ import com.mucommander.ui.main.MainFrame;
  * This job combines files into one file, optionally checking the CRC of the merged file.
  * @author Mariusz Jakubowski
  */
-@BUG MediumPriority - unpf (1 of 2) ->|public class CombineFilesJob extends AbstractCopyJob {
-@BUG MediumPriority - unpf (1 of 2) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(CombineFilesJob.class);
+public class CombineFilesJob extends AbstractCopyJob {
+	private static final Logger LOGGER = LoggerFactory.getLogger(CombineFilesJob.class);
 	
 	AbstractFile destFile = null;
 	private OutputStream out;
