@@ -36,7 +36,7 @@ import java.util.StringTokenizer;
  * </p>
  * @author Nicolas Rinaudo
  */
-@BUG LowPriority - nasb (1 of 1) ->|public class ProcessRunner {
+ProcessRunner {
     // - Initialisation ------------------------------------------------------
     // -----------------------------------------------------------------------
     /**
