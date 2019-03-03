@@ -63,9 +63,8 @@ public class CommandWriter implements CommandsXmlConstants, CommandBuilder {
         }
         catch(IOException e) {throw new CommandException(e);}
     }
-@BUG HighPriority - drzz (1 of 3) ->|
-@BUG HighPriority - drzz (1 of 3) ->|    /**
-@BUG HighPriority - drzz (1 of 3) ->|     * Closes the root XML element.
+    /**
+     * Closes the root XML element.
      */
     public void endBuilding() throws CommandException {
         try {out.endElement(ELEMENT_ROOT);}
