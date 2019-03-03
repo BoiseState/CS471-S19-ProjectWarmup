@@ -29,7 +29,7 @@ package com.mucommander.job;
 public class FileJobException extends Exception {
 
     /** Source cannot be opened */
-@BUG LowPriority - nrbj (1 of 1) ->|    public final static int CANNOT_OPEN_SOURCE = 1;
+public final static int CANNOT_OPEN_SOURCE = 1;
 
     /** Destination cannot be opened */
     public final static int CANNOT_OPEN_DESTINATION = 2;
