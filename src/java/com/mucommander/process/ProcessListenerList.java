@@ -37,7 +37,7 @@ public class ProcessListenerList implements ProcessListener {
     /**
      * Creates a new process listener list.
      */
-@BUG LowPriority - rfjy (1 of 1) ->|    public ProcessListenerList() {
+ public ProcessListenerList() {
         listeners = new Vector<ProcessListener>();
     }
 
