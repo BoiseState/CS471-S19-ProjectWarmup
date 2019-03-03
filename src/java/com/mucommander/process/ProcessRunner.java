@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - nkyb (2 of 2) ->|
-@BUG MediumPriority - nkyb (2 of 2) ->|package com.mucommander.process;
+package com.mucommander.process;
 
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.FileFactory;

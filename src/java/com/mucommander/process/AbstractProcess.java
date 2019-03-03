@@ -44,8 +44,8 @@ public abstract class AbstractProcess {
     // - Instance fields -------------------------------------------------------
     // -------------------------------------------------------------------------
     /** Stdout monitor. */
-@BUG MediumPriority - nkyb (1 of 2) ->|    private ProcessOutputMonitor stdoutMonitor;
-@BUG MediumPriority - nkyb (1 of 2) ->|    /** Stderr monitor. */
+private ProcessOutputMonitor stdoutMonitor;
+ /** Stderr monitor. */
     private ProcessOutputMonitor stderrMonitor;
 
 
