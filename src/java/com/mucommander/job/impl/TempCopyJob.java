@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - wpcn (2 of 3) ->|
-@BUG HighPriority - wpcn (2 of 3) ->|package com.mucommander.job.impl;
-@BUG HighPriority - wpcn (2 of 3) ->|
+
+package com.mucommander.job.impl;
+
 import java.io.IOException;
 
 import org.slf4j.Logger;

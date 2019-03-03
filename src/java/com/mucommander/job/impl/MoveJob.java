@@ -60,9 +60,8 @@ public class MoveJob extends AbstractCopyJob {
      * @param fileExistsAction default action to be performed when a file already exists in the destination, see {@link com.mucommander.ui.dialog.file.FileCollisionDialog} for allowed values
      * @param renameMode true if this job corresponds to a single file renaming
      */
-@BUG HighPriority - wpcn (1 of 3) ->|    public MoveJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, AbstractFile destFolder, String newName, int fileExistsAction, boolean renameMode) {
-@BUG HighPriority - wpcn (1 of 3) ->|        super(progressDialog, mainFrame, files, destFolder, newName, fileExistsAction);
-@BUG HighPriority - wpcn (1 of 3) ->|
+    public MoveJob(ProgressDialog progressDialog, MainFrame mainFrame, FileSet files, AbstractFile destFolder, String newName, int fileExistsAction, boolean renameMode) {
+    	super(progressDialog, mainFrame, files, destFolder, newName, fileExistsAction);
         this.errorDialogTitle = Translator.get("move_dialog.error_title");
         this.renameMode = renameMode;
     }
