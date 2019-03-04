@@ -28,7 +28,7 @@ import com.mucommander.commons.conf.ConfigurationException;
 import com.mucommander.commons.conf.ConfigurationListener;
 import com.mucommander.commons.conf.ValueList;
 import com.mucommander.commons.runtime.JavaVersion;
-@BUG LowPriority - mnpp (1 of 1) ->|import com.mucommander.commons.runtime.OsFamily;
+import com.mucommander.commons.runtime.OsFamily;
 import com.mucommander.ui.icon.FileIcons;
 
 /**
