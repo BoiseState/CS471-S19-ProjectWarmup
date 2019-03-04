@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - oxsv (1 of 3) ->|
-@BUG HighPriority - oxsv (1 of 3) ->|
-@BUG HighPriority - oxsv (1 of 3) ->|package com.mucommander.job.impl;
+
+
+ package com.mucommander.job.impl;
 
 import com.mucommander.commons.file.*;
 import com.mucommander.commons.file.archive.AbstractArchiveFile;
