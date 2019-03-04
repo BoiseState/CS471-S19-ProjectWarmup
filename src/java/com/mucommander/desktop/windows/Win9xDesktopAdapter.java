@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - nfro (1 of 2) ->|
-@BUG MediumPriority - nfro (1 of 2) ->|package com.mucommander.desktop.windows;
+
+package com.mucommander.desktop.windows;
 
 import com.mucommander.command.Command;
 import com.mucommander.command.CommandException;
