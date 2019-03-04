@@ -67,9 +67,11 @@ class InternalOpen extends LocalFileOperation {
      * </p>
      * @return <code>true</code> if this operations is available, <code>false</code> otherwise.
      */
-@BUG HighPriority - silp (1 of 3) ->|    @Override
-@BUG HighPriority - silp (1 of 3) ->|    public boolean isAvailable() {return getDesktop() != null && getDesktop().isSupported(Desktop.Action.OPEN);}
-@BUG HighPriority - silp (1 of 3) ->|
+    @Override
+    public boolean isAvailable() {
+        return getDesktop() != null && getDesktop().isSupported(Desktop.Action.OPEN);
+    }
+
     @Override
     public void execute(AbstractFile file) throws IOException {
         if(isAvailable())
