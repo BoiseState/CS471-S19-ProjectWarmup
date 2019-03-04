@@ -63,8 +63,8 @@ import java.util.StringTokenizer;
  * </p>
  * @author Nicolas Rinaudo
  */
-@BUG MediumPriority - lyap (1 of 2) ->|public class ExtensionManager {
-@BUG MediumPriority - lyap (1 of 2) ->|    // - Class fields -----------------------------------------------------------
+public class ExtensionManager {
+    // - Class fields -----------------------------------------------------------
     // --------------------------------------------------------------------------
     /** ClassLoader used to load all extensions. */
     private static AbstractFileClassLoader loader;
@@ -203,7 +203,7 @@ import java.util.StringTokenizer;
     /**
      * Returns an <code>AbstractFile</code> to the extension file with the specified filename and located in the
      * {@link #getExtensionsFolder() extensions folder}. The returned file may or may not exist.
-     * @param  filename    the extension's filename 
+     * @param  filename    the extension's filename
      * @return             an AbstractFile to the extension file with the specified filename and located in the
      * extensions folder.
      * @throws IOException if the file could not be instantiated.

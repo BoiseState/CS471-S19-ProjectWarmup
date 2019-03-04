@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - lyap (2 of 2) ->|
-@BUG MediumPriority - lyap (2 of 2) ->|package com.mucommander.extension;
+
+package com.mucommander.extension;
 
 import java.io.IOException;
 import java.util.List;
@@ -83,7 +83,7 @@ public class ClassFinder {
         AbstractFile[]   files;        // All subfolders or child class files of currentFile.
         Class<?>         currentClass; // Buffer for the current class.
         List<Class<?>>   result = new Vector<Class<?>>();
-        
+
         // Analyses all subdirectories and class files.
         files = currentFile.ls(filter);
         for (AbstractFile file : files) {
@@ -131,7 +131,7 @@ public class ClassFinder {
         loader           = classLoader;
         this.classFilter = classFilter;
 
-        // Looks for all matched classes in browsable.        
+        // Looks for all matched classes in browsable.
         return find("", browsable);
     }
 
