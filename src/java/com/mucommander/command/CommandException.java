@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - tidv (2 of 3) ->|
-@BUG HighPriority - tidv (2 of 3) ->|package com.mucommander.command;
-@BUG HighPriority - tidv (2 of 3) ->|
+
+package com.mucommander.command;
+
 /**
  * Exception thrown when errors occur while building custom commands.
  * @author Nicolas Rinaudo
