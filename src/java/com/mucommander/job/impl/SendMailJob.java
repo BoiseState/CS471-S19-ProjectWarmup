@@ -46,7 +46,7 @@ import java.util.Vector;
 public class SendMailJob extends TransferFileJob {
 
     /** True after connection to mail server has been established */
-@BUG LowPriority - dfjj (1 of 1) ->|    private boolean connectedToMailServer;
+private boolean connectedToMailServer;
 
     /** Error dialog title */
     private String errorDialogTitle;
