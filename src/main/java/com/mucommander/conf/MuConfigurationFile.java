@@ -42,8 +42,6 @@ abstract class MuConfigurationFile implements ConfigurationSource {
     /** Default configuration file name. */
     private final String DEFAULT_CONFIGURATION_FILE_NAME;
 
-@BUG LowPriority - ovhk (1 of 1) ->|
-
     // - Initialization -------------------------------------------------------------
     // ------------------------------------------------------------------------------
     /**
