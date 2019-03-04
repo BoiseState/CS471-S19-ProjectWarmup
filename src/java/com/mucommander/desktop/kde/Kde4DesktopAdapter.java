@@ -36,7 +36,7 @@
 
 package com.mucommander.desktop.kde;
 
-@BUG LowPriority - bwwo (1 of 1) ->|import com.mucommander.desktop.TrashProvider;
+import com.mucommander.desktop.TrashProvider;
 
 /**
  * @author Maxence Bernard
