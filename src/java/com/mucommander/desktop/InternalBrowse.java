@@ -45,7 +45,7 @@ class InternalBrowse extends UrlOperation {
 
     private Desktop getDesktop() {
         if (!initialized) {
-@BUG LowPriority - cjwv (1 of 1) ->|            if(Desktop.isDesktopSupported())
+            if(Desktop.isDesktopSupported())
                 desktop = Desktop.getDesktop();
             initialized = true;
         }
