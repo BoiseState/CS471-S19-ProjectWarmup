@@ -56,7 +56,7 @@ package com.mucommander.command;
  * @see AssociationWriter
  * @author Nicolas Rinaudo
  */
-@BUG LowPriority - ptsk (1 of 1) ->|interface AssociationsXmlConstants {
+interface AssociationsXmlConstants {
     // - XML elements ----------------------------------------------------------
     // -------------------------------------------------------------------------
     /** Root element. */
