@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - mpay (2 of 2) ->|
-@BUG MediumPriority - mpay (2 of 2) ->|package com.mucommander.desktop.kde;
+package com.mucommander.desktop.kde;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
