@@ -31,7 +31,7 @@ class InternalOpen extends LocalFileOperation {
     // - Instance variables --------------------------------------------------
     // -----------------------------------------------------------------------
     /** Underlying desktop instance. */
-@BUG LowPriority - ynhz (1 of 1) ->|    private Desktop desktop;
+    private Desktop desktop;
     private boolean initialized = false;
 
 
