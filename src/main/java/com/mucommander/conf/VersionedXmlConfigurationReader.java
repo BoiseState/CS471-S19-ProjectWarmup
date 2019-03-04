@@ -42,7 +42,7 @@ public class VersionedXmlConfigurationReader extends XmlConfigurationReader {
      *
      * @return the muCommander version that was used to write the configuration file, <code>null</code> if it is unknown.
      */
-@BUG LowPriority - qxqq (1 of 1) ->|    public String getVersion() {
+    public String getVersion() {
         return version;
     }
 
