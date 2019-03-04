@@ -49,8 +49,8 @@ import com.mucommander.ui.viewer.text.TextViewer;
  * 
  * @author Arik Hadas
  */
-@BUG MediumPriority - jltl (1 of 2) ->|public class MuSnapshot {
-@BUG MediumPriority - jltl (1 of 2) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(MuSnapshot.class);
+public class MuSnapshot {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MuSnapshot.class);
 	
 	// - Last screen variables -----------------------------------------------
     // -----------------------------------------------------------------------
