@@ -42,8 +42,8 @@ public class MuConfigurations {
 	// API for preferences //
 	/////////////////////////
 	
-@BUG MediumPriority - waof (1 of 2) ->|	public static MuPreferencesAPI getPreferences() {
-@BUG MediumPriority - waof (1 of 2) ->|		return preferences;
+|	public static MuPreferencesAPI getPreferences() {
+	return preferences;
 	}
 	
 	public static void loadPreferences() throws IOException, ConfigurationException {
