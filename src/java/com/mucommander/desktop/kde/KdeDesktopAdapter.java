@@ -54,9 +54,7 @@ private int multiClickInterval;
             CommandManager.registerDefaultCommand(new Command(CommandManager.FILE_MANAGER_ALIAS, execCommand, CommandType.SYSTEM_COMMAND, getFileManagerName()));
         }
         catch(CommandException e) {throw new DesktopInitialisationException(e);}
-@BUG HighPriority - xjyb (1 of 3) ->|
-@BUG HighPriority - xjyb (1 of 3) ->|        // Multi-click interval retrieval
-@BUG HighPriority - xjyb (1 of 3) ->|        try {
+        try {
             String value = KdeConfig.getValue(DOUBLE_CLICK_CONFIG_KEY);
             if(value==null)
                 multiClickInterval = super.getMultiClickInterval();
