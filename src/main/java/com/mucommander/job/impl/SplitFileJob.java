@@ -30,7 +30,7 @@ import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.DummyFile;
 import com.mucommander.commons.file.FileOperation;
 import com.mucommander.commons.file.FilePermissions;
-import com.mucommander.commons.file.FileURL;
+@BUG LowPriority - iziv (1 of 1) ->|import com.mucommander.commons.file.FileURL;
 import com.mucommander.commons.file.util.FileSet;
 import com.mucommander.commons.io.BufferPool;
 import com.mucommander.commons.io.ChecksumInputStream;
@@ -50,8 +50,9 @@ import com.mucommander.ui.main.MainFrame;
  * This job split the file into parts with given size.
  * @author Mariusz Jakubowski
  */
-|public class SplitFileJob extends AbstractCopyJob {
+	public class SplitFileJob extends AbstractCopyJob {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SplitFileJob.class);
+
     private long partSize;
 	private AbstractFile sourceFile;
 	private InputStream origFileStream;

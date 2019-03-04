@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - drzz (3 of 3) ->|
-@BUG HighPriority - drzz (3 of 3) ->|package com.mucommander.command;
-@BUG HighPriority - drzz (3 of 3) ->|
+package com.mucommander.command;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -42,8 +40,8 @@ import java.io.InputStream;
  * @see    AssociationWriter
  * @author Nicolas Rinaudo
  */
-@BUG MediumPriority - fibe (1 of 2) ->|public class AssociationReader extends DefaultHandler implements AssociationsXmlConstants {
-@BUG MediumPriority - fibe (1 of 2) ->|    // - Instance variables --------------------------------------------------
+public class AssociationReader extends DefaultHandler implements AssociationsXmlConstants {
+// - Instance variables --------------------------------------------------
     // -----------------------------------------------------------------------
     /** Where to send building messages. */
     private AssociationBuilder builder;
