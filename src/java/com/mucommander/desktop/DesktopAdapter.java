@@ -15,9 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - ovei (2 of 3) ->|
-@BUG HighPriority - ovei (2 of 3) ->|package com.mucommander.desktop;
-@BUG HighPriority - ovei (2 of 3) ->|
+package com.mucommander.desktop;
+
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.filter.FileFilter;
 

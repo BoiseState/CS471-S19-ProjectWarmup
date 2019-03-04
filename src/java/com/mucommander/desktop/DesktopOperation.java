@@ -124,9 +124,8 @@ import java.io.IOException;
      * @param  target parameters to check.
      * @return        <code>true</code> if the operation can be executed with the specified parameters, <code>false</code> otherwise.
      */
-@BUG HighPriority - ovei (1 of 3) ->|    public boolean canExecute(Object[] target);
-@BUG HighPriority - ovei (1 of 3) ->|
-@BUG HighPriority - ovei (1 of 3) ->|    /**
+public boolean canExecute(Object[] target);
+   /**
      * Executes the operation on the specified parameters.
      * <p>
      * There is no guarantee that this method is available for the specified parameters. This must be checked
