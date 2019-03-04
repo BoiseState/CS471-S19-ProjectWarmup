@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - cnxc (2 of 2) ->|
-@BUG MediumPriority - cnxc (2 of 2) ->|package com.mucommander.shell;
+package com.mucommander.shell;
 
 import java.io.File;
 import java.io.FileNotFoundException;

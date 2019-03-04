@@ -29,8 +29,8 @@ import java.io.InputStream;
  * Parses XML shell history files and populates the {@link com.mucommander.shell.ShellHistoryManager}.
  * @author Nicolas Rinaudo
  */
-@BUG MediumPriority - cnxc (1 of 2) ->|class ShellHistoryReader extends DefaultHandler implements ShellHistoryConstants {
-@BUG MediumPriority - cnxc (1 of 2) ->|    // - Reader statuses -----------------------------------------------------
+class ShellHistoryReader extends DefaultHandler implements ShellHistoryConstants {
+    // - Reader statuses -----------------------------------------------------
     // -----------------------------------------------------------------------
     /** Parsing hasn't started. */
     private static final int STATUS_UNKNOWN = 0;
