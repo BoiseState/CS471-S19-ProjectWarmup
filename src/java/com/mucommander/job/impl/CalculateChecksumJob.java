@@ -64,9 +64,9 @@ import com.mucommander.ui.viewer.ViewerRegistrar;
  *
  * @author Maxence Bernard
  */
-@BUG LowPriority - lybg (1 of 1) ->|public class CalculateChecksumJob extends TransferFileJob {
+public class CalculateChecksumJob extends TransferFileJob {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CalculateChecksumJob.class);
-	
+
     /** The checksum file where the checksum of each file is written */
     private AbstractFile checksumFile;
     /** The OutputStream of the checksum file */
@@ -176,7 +176,7 @@ import com.mucommander.ui.viewer.ViewerRegistrar;
                     return false;
 
                 LOGGER.debug("Caught IOException", e);
-                
+
                 int ret = showErrorDialog(Translator.get("error"), Translator.get("error_while_transferring", file.getAbsolutePath()));
                 // Retry loops
                 if(ret==FileJobAction.RETRY) {
@@ -263,7 +263,7 @@ import com.mucommander.ui.viewer.ViewerRegistrar;
     @Override
     protected void jobStopped() {
         super.jobStopped();
-        
+
         // Close the checksum file's OutputStream
         if(checksumFileOut !=null) {
             try { checksumFileOut.close(); }
