@@ -34,8 +34,8 @@ class VersionedXmlConfigurationWriterFactory extends ConfigurationWriterFactory<
 	 * 
 	 * @param rootElementName the name of the root element in the XML file
 	 */
-@BUG MediumPriority - jhgs (1 of 2) ->|	public VersionedXmlConfigurationWriterFactory(String rootElementName) {
-@BUG MediumPriority - jhgs (1 of 2) ->|		super(rootElementName);
+	public VersionedXmlConfigurationWriterFactory(String rootElementName) {
+		super(rootElementName);
 	}
 	
 	@Override
