@@ -57,9 +57,9 @@ public class ChangeFileAttributesJob extends FileJob {
 
         this.date = date;
         this.recurseOnDirectories = recurseOnDirectories;
-@BUG HighPriority - dung (1 of 3) ->|    }
-@BUG HighPriority - dung (1 of 3) ->|
-@BUG HighPriority - dung (1 of 3) ->|
+    }
+
+
     ////////////////////////////
     // FileJob implementation //
     ////////////////////////////

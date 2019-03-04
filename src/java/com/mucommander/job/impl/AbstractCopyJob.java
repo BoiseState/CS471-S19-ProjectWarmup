@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - dung (2 of 3) ->|
-@BUG HighPriority - dung (2 of 3) ->|package com.mucommander.job.impl;
-@BUG HighPriority - dung (2 of 3) ->|
+
+package com.mucommander.job.impl;
+
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.archive.AbstractRWArchiveFile;
 import com.mucommander.commons.file.util.FileSet;
@@ -40,21 +40,21 @@ import java.io.IOException;
  * @see com.mucommander.job.impl.MoveJob
  */
 public abstract class AbstractCopyJob extends TransferFileJob {
-    
+
     /** Base destination folder */
     protected AbstractFile baseDestFolder;
-    
+
     /** New filename in destination */
     protected String newName;
 
     /** Default choice when encountering an existing file */
     protected int defaultFileExistsAction = FileCollisionDialog.ASK_ACTION;
-    
+
     /** Title used for error dialogs */
     protected String errorDialogTitle;
-    
+
     protected boolean append;
-    
+
     /** The archive that contains the destination files (may be null) */
     protected AbstractRWArchiveFile archiveToOptimize;
 
@@ -76,7 +76,7 @@ public abstract class AbstractCopyJob extends TransferFileJob {
         super(progressDialog, mainFrame, files);
 
         this.baseDestFolder = destFolder;
-        this.newName = newName;        
+        this.newName = newName;
         this.defaultFileExistsAction = fileExistsAction;
     }
 
@@ -108,12 +108,12 @@ public abstract class AbstractCopyJob extends TransferFileJob {
         } while(true);
         return destFile;
     }
-    
+
     /**
      * Checks if there is a file collision (file exists in the destination).
      * If there is no collision this method returns destFile.
      * If there is a collision this method returns: <ul>
-     *  <li>null if a user cancelled the transfer 
+     *  <li>null if a user cancelled the transfer
      *  <li>null if a user skipped the file
      *  <li>destFile if a user resumed the transfer (and sets append flag)
      *  <li>destFile if a user has chosen to overwrite the file
@@ -131,7 +131,7 @@ public abstract class AbstractCopyJob extends TransferFileJob {
             // Check for file collisions (file exists in the destination, destination subfolder of source, ...)
             // if a default action hasn't been specified
             int collision = FileCollisionChecker.checkForCollision(file, destFile);
-            
+
             // If allowCaseVariation is true and both files are equal, test if the destination filename is a variation
             // of the original filename with a different case. If that is the case, do not warn about the source and
             // destination being the same.
@@ -141,8 +141,8 @@ public abstract class AbstractCopyJob extends TransferFileJob {
                 if(sourceFileName.equalsIgnoreCase(destFileName) && !sourceFileName.equals(destFileName))
                     break;
             }
-            
-            // Handle collision, asking the user what to do or using a default action to resolve the collision 
+
+            // Handle collision, asking the user what to do or using a default action to resolve the collision
             if(collision != FileCollisionChecker.NO_COLLOSION) {
                 int choice;
                 // Use default action if one has been set, if not show up a dialog
@@ -155,7 +155,7 @@ public abstract class AbstractCopyJob extends TransferFileJob {
                 }
                 else
                     choice = defaultFileExistsAction;
-    
+
                 // Cancel, skip or close dialog
                 if (choice==-1 || choice== FileCollisionDialog.CANCEL_ACTION) {
                     interrupt();
@@ -200,7 +200,7 @@ public abstract class AbstractCopyJob extends TransferFileJob {
         }
         return destFile;
     }
-    
+
     /**
      * Optimizes the given writable archive file and notifies the user in case of an error.
      *
