@@ -46,7 +46,6 @@ import com.mucommander.desktop.TrashProvider;
  * @author Maxence Bernard
  */
 class Kde4TrashProvider implements TrashProvider {
-@BUG LowPriority - vbwl (1 of 1) ->|
     public AbstractTrash getTrash() {
         return new KdeTrash(Kde4DesktopAdapter.BASE_COMMAND);
     }
