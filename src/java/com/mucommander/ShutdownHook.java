@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - tqyz (3 of 3) ->|
-@BUG HighPriority - tqyz (3 of 3) ->|package com.mucommander;
-@BUG HighPriority - tqyz (3 of 3) ->|
+package com.mucommander;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

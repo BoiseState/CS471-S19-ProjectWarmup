@@ -23,9 +23,8 @@ import java.io.InputStream;
 import java.util.Calendar;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
-@BUG HighPriority - tqyz (1 of 3) ->|
-@BUG HighPriority - tqyz (1 of 3) ->|import org.slf4j.Logger;
-@BUG HighPriority - tqyz (1 of 3) ->|import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.mucommander.commons.file.util.ResourceLoader;
 
