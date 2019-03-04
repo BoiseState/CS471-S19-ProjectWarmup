@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - fmzl (1 of 3) ->|
-@BUG HighPriority - fmzl (1 of 3) ->|package com.mucommander.desktop.xfce;
-@BUG HighPriority - fmzl (1 of 3) ->|
+
+package com.mucommander.desktop.xfce;
+
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
