@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
  * </p>
  * @author Nicolas Rinaudo
  */
-@BUG LowPriority - dlgs (1 of 1) ->|public class LookAndFeelFilter implements ClassFilter {
+public class LookAndFeelFilter implements ClassFilter {
 	private static final Logger LOGGER = LoggerFactory.getLogger(LookAndFeelFilter.class);
 	
 	/**
