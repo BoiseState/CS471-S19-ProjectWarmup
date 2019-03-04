@@ -48,8 +48,8 @@ public class AssociationWriter implements AssociationsXmlConstants, AssociationB
      * @throws IOException if an I/O error occurs.
      */
     public AssociationWriter(OutputStream stream) throws IOException {out = new XmlWriter(stream);}
-@BUG MediumPriority - ijpq (1 of 2) ->|
-@BUG MediumPriority - ijpq (1 of 2) ->|
+
+
 
     // - Builder methods ------------------------------------------------------
     // -----------------------------------------------------------------------
