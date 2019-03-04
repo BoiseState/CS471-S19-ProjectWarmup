@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - jhml (2 of 3) ->|
-@BUG HighPriority - jhml (2 of 3) ->|package com.mucommander.job;
-@BUG HighPriority - jhml (2 of 3) ->|
+
+package com.mucommander.job;
+
 import java.util.EventListener;
 
 /**
