@@ -15,9 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - wged (3 of 3) ->|
-@BUG HighPriority - wged (3 of 3) ->|package com.mucommander;
-@BUG HighPriority - wged (3 of 3) ->|
+package com.mucommander;
 import java.awt.GraphicsEnvironment;
 import java.io.IOException;
 import java.lang.reflect.Constructor;

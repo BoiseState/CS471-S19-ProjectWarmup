@@ -94,9 +94,9 @@ public class VersionChecker extends DefaultHandler {
     /** Currently parsing the version tag. */
     public static final int STATE_VERSION      = 1;
     /** Currently parsing the download URL tag. */
-@BUG HighPriority - wged (1 of 3) ->|    public static final int STATE_DOWNLOAD_URL = 2;
-@BUG HighPriority - wged (1 of 3) ->|    /** Currently parsing the download URL tag. */
-@BUG HighPriority - wged (1 of 3) ->|    public static final int STATE_JAR_URL      = 3;
+    public static final int STATE_DOWNLOAD_URL = 2;
+    /** Currently parsing the download URL tag. */
+    public static final int STATE_JAR_URL      = 3;
     /** Currently parsing the date tag. */
     public static final int STATE_DATE         = 4;
     /** We're not quite sure what we're parsing. */
