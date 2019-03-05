@@ -56,7 +56,9 @@ import com.mucommander.ui.main.WindowManager;
  *
  * @author Maxence Bernard
  */
-@BUG LowPriority - ngsy (1 of 1) ->|public class SelfUpdateJob extends CopyJob {
+@BUG LowPriority - ngsy (1 of 1) ->|
+
+public class SelfUpdateJob extends CopyJob {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SelfUpdateJob.class);
 	
     /** The JAR file to be updated */
