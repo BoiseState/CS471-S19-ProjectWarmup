@@ -66,7 +66,7 @@ import java.io.IOException;
  * </p>
  * @author Nicolas Rinaudo
  */
-@BUG LowPriority - jvin (1 of 1) ->|public interface DesktopOperation {
+public interface DesktopOperation {
     /**
      * Returns the operation's name.
      * <p>
