@@ -15,18 +15,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - jsxp (3 of 3) ->|
-@BUG HighPriority - jsxp (3 of 3) ->|package com.mucommander.job.impl;
-@BUG HighPriority - jsxp (3 of 3) ->|
+
+package com.mucommander.job.impl;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.util.FileSet;
 import com.mucommander.commons.io.StreamUtils;
