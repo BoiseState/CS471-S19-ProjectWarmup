@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - ypxc (2 of 2) ->|
-@BUG MediumPriority - ypxc (2 of 2) ->|package com.mucommander.job;
+
+package com.mucommander.job;
 
 import com.mucommander.text.Translator;
 
