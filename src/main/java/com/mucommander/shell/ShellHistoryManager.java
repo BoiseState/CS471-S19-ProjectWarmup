@@ -59,9 +59,9 @@ public class ShellHistoryManager {
     /** List of shell history registered listeners. */
     private static WeakHashMap<ShellHistoryListener, ?> listeners;
     /** Stores the shell history. */
-@BUG HighPriority - nxcz (1 of 3) ->|    private static String[]                             history;
-@BUG HighPriority - nxcz (1 of 3) ->|    /** Index of the first element of the history. */
-@BUG HighPriority - nxcz (1 of 3) ->|    private static int                                  historyStart;
+    private static String[]                             history;
+    /** Index of the first element of the history. */
+    private static int                                  historyStart;
     /** Index of the last element of the history. */
     private static int                                  historyEnd;
     /** Path to the history file. */
