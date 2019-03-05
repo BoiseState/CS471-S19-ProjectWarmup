@@ -35,7 +35,7 @@ import com.mucommander.conf.MuPreference;
 import com.mucommander.conf.MuPreferences;
 import com.mucommander.io.backup.BackupInputStream;
 import com.mucommander.io.backup.BackupOutputStream;
-@BUG LowPriority - sheo (1 of 1) ->|
+
 /**
  * Used to manage shell history.
  * <p>
