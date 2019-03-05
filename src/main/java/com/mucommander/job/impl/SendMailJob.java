@@ -64,9 +64,9 @@ private boolean connectedToMailServer;
     private String mailBody;
 
     /** SMTP server */
-@BUG HighPriority - yyhg (1 of 3) ->|    private String mailServer;
-@BUG HighPriority - yyhg (1 of 3) ->|    /** From name */
-@BUG HighPriority - yyhg (1 of 3) ->|    private String fromName;
+    private String mailServer;
+    /** From name */
+    private String fromName;
     /** From address */
     private String fromAddress;
 	
