@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - bejw (3 of 3) ->|
-@BUG HighPriority - bejw (3 of 3) ->|package com.mucommander.job;
-@BUG HighPriority - bejw (3 of 3) ->|
+
+package com.mucommander.job;
+
 /**
  * Interface to be implemented by classes that wish to be notified of state changes on a particular
  * {@link FileJob}. Those classes need to be registered to receive those events, this can be done by calling
