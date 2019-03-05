@@ -30,7 +30,7 @@ import com.mucommander.commons.file.AbstractFile;
 import com.mucommander.commons.file.DummyFile;
 import com.mucommander.commons.file.FileOperation;
 import com.mucommander.commons.file.FilePermissions;
-@BUG LowPriority - iziv (1 of 1) ->|import com.mucommander.commons.file.FileURL;
+import com.mucommander.commons.file.FileURL;
 import com.mucommander.commons.file.util.FileSet;
 import com.mucommander.commons.io.BufferPool;
 import com.mucommander.commons.io.ChecksumInputStream;
