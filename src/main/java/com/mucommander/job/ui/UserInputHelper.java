@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG HighPriority - yyhg (2 of 3) ->|
-@BUG HighPriority - yyhg (2 of 3) ->|package com.mucommander.job.ui;
-@BUG HighPriority - yyhg (2 of 3) ->|
+
+package com.mucommander.job.ui;
+
 import javax.swing.SwingUtilities;
 
 import org.slf4j.Logger;
