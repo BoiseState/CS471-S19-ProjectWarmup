@@ -42,7 +42,7 @@ public class ConfiguredGnomeDesktopAdapter extends GnomeDesktopAdapter {
         }
         catch(Exception e) {}
 
-@BUG LowPriority - ztph (1 of 1) ->|        try {
+        try {
             ProcessRunner.execute(GNOME_OPEN);
             return GNOME_OPEN;
         }
