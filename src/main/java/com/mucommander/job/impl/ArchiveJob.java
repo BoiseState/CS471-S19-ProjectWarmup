@@ -35,8 +35,8 @@ import com.mucommander.job.FileJobState;
 import com.mucommander.text.Translator;
 import com.mucommander.ui.dialog.file.FileCollisionDialog;
 import com.mucommander.ui.dialog.file.ProgressDialog;
-@BUG MediumPriority - iwxw (1 of 2) ->|import com.mucommander.ui.main.MainFrame;
-@BUG MediumPriority - iwxw (1 of 2) ->|
+import com.mucommander.ui.main.MainFrame;
+
 
 /**
  * This FileJob is responsible for compressing a set of files into an archive file.
