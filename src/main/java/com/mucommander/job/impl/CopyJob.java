@@ -41,8 +41,11 @@ import com.mucommander.ui.main.MainFrame;
  *
  * @author Maxence Bernard
  */
-@BUG MediumPriority - gapt (1 of 2) ->|public class CopyJob extends AbstractCopyJob {
-@BUG MediumPriority - gapt (1 of 2) ->|	private static final Logger LOGGER = LoggerFactory.getLogger(CopyJob.class);
+@BUG MediumPriority - gapt (1 of 2) ->|
+@BUG MediumPriority - gapt (1 of 2) ->|	
+
+public class CopyJob extends AbstractCopyJob {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CopyJob.class);
 
     /** Destination file that is being copied, this value is updated every time #processFile() is called.
      * The value can be used by subclasses that override processFile should they need to work on the destination file. */
