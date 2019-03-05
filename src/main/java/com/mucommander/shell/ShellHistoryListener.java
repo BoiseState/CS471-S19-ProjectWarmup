@@ -32,5 +32,5 @@ public interface ShellHistoryListener {
     /**
      * Notifies the listeners that the history has been cleared.
      */
-@BUG LowPriority - jjoq (1 of 1) ->|    public void historyCleared();
+    public void historyCleared();
 }
