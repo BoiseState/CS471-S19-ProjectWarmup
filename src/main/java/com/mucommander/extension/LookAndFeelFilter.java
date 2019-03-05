@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@BUG MediumPriority - odwj (2 of 2) ->|
-@BUG MediumPriority - odwj (2 of 2) ->|package com.mucommander.extension;
+
+package com.mucommander.extension;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
