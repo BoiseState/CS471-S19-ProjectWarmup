@@ -34,8 +34,7 @@ public class WindowsTrashProvider implements TrashProvider {
     public AbstractTrash getTrash() {
         return new WindowsTrash();
     }
-@BUG MediumPriority - qtpf (1 of 2) ->|
-@BUG MediumPriority - qtpf (1 of 2) ->|    /**
+    /**
      * Returns <code>true</code> if the Windows Trash can be used on the current runtime environment.
      *
      * @return <code>true</code> if the Windows Trash can be used on the current runtime environment.
