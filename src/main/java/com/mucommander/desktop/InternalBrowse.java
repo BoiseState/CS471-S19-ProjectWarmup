@@ -73,9 +73,9 @@ class InternalBrowse extends UrlOperation {
      * @param  url         URL to browse.
      * @throws IOException if an error occured.
      */
-@BUG HighPriority - ubjm (1 of 3) ->|    @Override
-@BUG HighPriority - ubjm (1 of 3) ->|    public void execute(URL url) throws IOException {
-@BUG HighPriority - ubjm (1 of 3) ->|        // If java.awt.Desktop browsing is available, use it.
+    @Override
+    public void execute(URL url) throws IOException {
+     // If java.awt.Desktop browsing is available, use it.
         if(isAvailable()) {
             try {getDesktop().browse(url.toURI());}
             catch(URISyntaxException e) {throw new IOException(e.getMessage());}
