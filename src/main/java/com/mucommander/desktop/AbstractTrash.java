@@ -45,7 +45,7 @@ public abstract class AbstractTrash {
      * @param file the file to test
      * @return true if the given file can be moved to the trash
      */
-@BUG LowPriority - kbro (1 of 1) ->|    public abstract boolean canMoveToTrash(AbstractFile file);
+public abstract boolean canMoveToTrash(AbstractFile file);
 
     /**
      * Attempts to move the given file to the trash and returns <code>true</code> if the file could be moved successfully.
